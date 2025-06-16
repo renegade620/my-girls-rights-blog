@@ -1,5 +1,5 @@
 ---
-layout: article.njk
+layout: post.njk
 title: "AFRICA'S YOUTH: A GENERATION TOLD \"NOT READY YET\"?"
 date: 2025-06-16T15:03:00.000Z
 category: Legal Frameworks
