@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advancing Girl Rights | Personal Blog</title>
     <meta name="description" content="Personal blog advancing girls' rights across Africa. Articles, resources, and perspectives on SRHR, education, and more.">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Defer scripts -->
+    <script src="https://cdn.tailwindcss.com" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
@@ -50,7 +52,7 @@
                     <a href="#contact" class="text-gray-900 hover:text-indigo-600 px-3 py-2 font-medium">Contact</a>
                 </div>
                 <div class="-mr-2 flex items-center md:hidden">
-                    <button type="button" onclick="toggleMobileMenu()" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                    <button type="button" aria-expanded="false" aria-controls="mobileMenu" onclick="toggleMobileMenu()" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                         <i class="fas fa-bars"></i>
                     </button>
                 </div>
@@ -138,32 +140,7 @@
             <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
                 Browse by Topic
             </h2>
-            <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
-                <a href="#" class="category-pill rounded-full py-3 px-6 bg-gray-100 text-gray-800 font-medium text-center transition-all">
-                    SRHR
-                </a>
-                <a href="#" class="category-pill rounded-full py-3 px-6 bg-gray-100 text-gray-800 font-medium text-center transition-all">
-                    Education
-                </a>
-                <a href="#" class="category-pill rounded-full py-3 px-6 bg-gray-100 text-gray-800 font-medium text-center transition-all">
-                    Teen Pregnancy
-                </a>
-                <a href="#" class="category-pill rounded-full py-3 px-6 bg-gray-100 text-gray-800 font-medium text-center transition-all">
-                    Child Marriage
-                </a>
-                <a href="#" class="category-pill rounded-full py-3 px-6 bg-gray-100 text-gray-800 font-medium text-center transition-all">
-                    GBV
-                </a>
-                <a href="#" class="category-pill rounded-full py-3 px-6 bg-gray-100 text-gray-800 font-medium text-center transition-all">
-                    Emergency Areas
-                </a>
-                <a href="#" class="category-pill rounded-full py-3 px-6 bg-gray-100 text-gray-800 font-medium text-center transition-all">
-                    Legal Frameworks
-                </a>
-                <a href="#" class="category-pill rounded-full py-3 px-6 bg-gray-100 text-gray-800 font-medium text-center transition-all">
-                    West Africa
-                </a>
-            </div>
+            <div id="categoryPills" class="grid grid-cols-2 gap-4 md:grid-cols-4"></div>
         </div>
     </section>
 
@@ -361,7 +338,7 @@
             </div>
 
             <div class="mt-12 text-center">
-                <a href="#" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700">
+                <a href="/articles" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700">
                     View All Articles
                     <i class="fas fa-arrow-right ml-2"></i>
                 </a>
@@ -749,6 +726,16 @@
                 form.reset();
             });
         });
+
+        // Category pills population
+        const categories = [
+    "SRHR", "Education", "Teen Pregnancy", "Child Marriage",
+    "GBV", "Emergency Areas", "Legal Frameworks", "West Africa"
+];
+const categoryContainer = document.getElementById('categoryPills');
+categoryContainer.innerHTML = categories.map(cat =>
+    `<button type="button" class="category-pill rounded-full py-3 px-6 bg-gray-100 text-gray-800 font-medium text-center transition-all" aria-label="${cat}">${cat}</button>`
+).join('');
     </script>
 </body>
 </html>
