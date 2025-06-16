@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advancing Girl Rights | Personal Blog</title>
+    <meta name="description" content="Personal blog advancing girls' rights across Africa. Articles, resources, and perspectives on SRHR, education, and more.">
+    <!-- Defer scripts -->
+    <script src="https://cdn.tailwindcss.com" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #f5f7fa 0%, #bbc9dd 100%);
+        }
+        
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+        
+        .category-pill:hover {
+            background-color: #4f46e5;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <span class="text-xl font-bold text-indigo-700">Girl Rights Advocate</span>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="#" class="text-gray-900 hover:text-indigo-600 px-3 py-2 font-medium">Home</a>
+                    <a href="#articles" class="text-gray-900 hover:text-indigo-600 px-3 py-2 font-medium">Articles</a>
+                    <a href="#about" class="text-gray-900 hover:text-indigo-600 px-3 py-2 font-medium">About</a>
+                    <a href="#contact" class="text-gray-900 hover:text-indigo-600 px-3 py-2 font-medium">Contact</a>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" aria-expanded="false" aria-controls="mobileMenu" onclick="toggleMobileMenu()" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="hidden md:hidden">
+            <div class="pt-2 pb-3 space-y-1">
+                <a href="#" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-indigo-600">Home</a>
+                <a href="#articles" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-indigo-600">Articles</a>
+                <a href="#about" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-indigo-600">About</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-indigo-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Filter/Search Bar -->
+    <div class="mb-12 bg-white p-4 rounded-lg shadow-sm">
+                <div class="flex flex-wrap gap-2 items-center">
+                    <span class="text-sm font-medium text-gray-700 mr-3">Filter by:</span>
+                    <button class="px-4 py-2 bg-white border border-gray-300 rounded-full text-sm font-medium hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        All Topics
+                    </button>
+                    <button class="px-4 py-2 bg-white border border-gray-300 rounded-full text-sm font-medium hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        SRHR
+                    </button>
+                    <button class="px-4 py-2 bg-white border border-gray-300 rounded-full text-sm font-medium hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        Teen Pregnancy
+                    </button>
+                    <button class="px-4 py-2 bg-white border border-gray-300 rounded-full text-sm font-medium hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        AU Policy
+                    </button>
+                    <button class="px-4 py-2 bg-white border border-gray-300 rounded-full text-sm font-medium hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        Education
+                    </button>
+                    <div class="relative ml-auto">
+                        <input type="text" placeholder="Search articles..." class="pl-10 pr-4 py-2 border border-gray-300 rounded-full text-sm w-full md:w-64 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                    </div>
+                </div>
+            </div>
+
+    <!-- Hero Section -->
+    <header class="bg-indigo-800 text-white py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:items-center md:justify-between">
+                <div class="md:w-1/2 space-y-6">
+                    <h1 class="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+                        <span class="block">Charles Nyukuri</span>
+                        <span class="block text-indigo-300">Advocating for Human Dignity,</span>
+                        <span class="block text-indigo-300">One Story at a Time</span>
+                    </h1>
+                    <p class="text-xl text-indigo-100 italic">
+                        "Equality isn't a privilege - it's every girl's birthright."
+                    </p>
+                    <div class="pt-4 border-t border-indigo-600">
+                        <p class="text-indigo-200">
+                            Director at Plan International | Legal Advocate | Champion for Girls' Rights Across Africa
+                        </p>
+                    </div>
+                    <div class="mt-8 flex space-x-4">
+                        <a href="#articles" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-900 bg-white hover:bg-indigo-50">
+                            Read My Articles
+                        </a>
+                        <a href="#about" class="inline-flex items-center px-6 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-white hover:bg-opacity-10">
+                            My Advocacy Journey
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:block md:w-1/3">
+                    <div class="relative">
+                        <img src="/path-to-charles-professional-image.jpg" alt="Charles Nyukuri" class="rounded-lg shadow-2xl w-full h-auto">
+                        <div class="absolute -bottom -right-4 bg-white p-2 rounded shadow-md">
+                            <p class="text-xs text-indigo-900 font-bold">Personal Views Only</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Article Categories -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
+                Browse by Topic
+            </h2>
+            <div id="categoryPills" class="grid grid-cols-2 gap-4 md:grid-cols-4"></div>
+        </div>
+    </section>
+
+    <!-- Featured Articles -->
+    <section id="articles" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-12">
+                <div class="lg:text-center md:text-left">
+                <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Recent Publications</h2>
+                <p class="mt-2 text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl">
+                    My Latest Articles
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-600 lg:mx-auto">
+                    Personal perspectives on advancing girls' rights across the continent
+                </p>
+            </div>
+
+            <div class="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Article 1 -->
+                <div class="article-card bg-white rounded-lg shadow-md overflow-hidden transition-all">
+                    <div class="p-6">
+                        <div class="flex items-center">
+                            <span class="inline-block px-3 py-1 text-xs font-semibold text-indigo-800 bg-indigo-100 rounded-full">SRHR</span>
+                            <span class="ml-2 text-xs text-gray-500">June 15, 2023</span>
+                        </div>
+                        <a href="#" class="block mt-2">
+                            <h3 class="text-xl font-semibold text-gray-900 hover:text-indigo-600">
+                                Breaking Taboos: Comprehensive Sexuality Education in West African Schools
+                            </h3>
+                            <p class="mt-3 text-base text-gray-600">
+                                Analyzing legal barriers and community resistance to implementing SRHR education in Nigeria, Ghana, and Sierra Leone.
+                            </p>
+                        </a>
+                        <div class="mt-4 flex items-center">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-clock text-gray-400"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm text-gray-500">8 min read</p>
+                            </div>
+                            <div class="ml-auto flex space-x-4">
+                                <a href="#" class="text-sm font-medium text-indigo-600 hover:text-indigo-500">Read more →</a>
+                                <button class="text-indigo-600 hover:text-indigo-800" title="Listen to this article">
+                                    <i class="fas fa-headphones"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 2 -->
+                <div class="article-card bg-white rounded-lg shadow-md overflow-hidden transition-all">
+                    <div class="p-6">
+                        <div class="flex items-center">
+                            <span class="inline-block px-3 py-1 text-xs font-semibold text-green-800 bg-green-100 rounded-full">Education</span>
+                            <span class="ml-2 text-xs text-gray-500">May 28, 2023</span>
+                        </div>
+                        <a href="#" class="block mt-2">
+                            <h3 class="text-xl font-semibold text-gray-900 hover:text-indigo-600">
+                                Schools as Safe Havens: Protecting Girls in Conflict Zones
+                            </h3>
+                            <p class="mt-3 text-base text-gray-600">
+                                Case studies from South Sudan and DRC show how innovative education programs are creating safe spaces amidst violence.
+                            </p>
+                        </a>
+                        <div class="mt-4 flex items-center">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-clock text-gray-400"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm text-gray-500">12 min read</p>
+                            </div>
+                            <div class="ml-auto">
+                                <a href="#" class="text-sm font-medium text-indigo-600 hover:text-indigo-500">Read more →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 3 -->
+                <div class="article-card bg-white rounded-lg shadow-md overflow-hidden transition-all">
+                    <div class="p-6">
+                        <div class="flex items-center">
+                            <span class="inline-block px-3 py-1 text-xs font-semibold text-red-800 bg-red-100 rounded-full">Teen Pregnancy</span>
+                            <span class="ml-2 text-xs text-gray-500">April 10, 2023</span>
+                        </div>
+                        <a href="#" class="block mt-2">
+                            <h3 class="text-xl font-semibold text-gray-900 hover:text-indigo-600">
+                                Policy Gaps in Teen Pregnancy Prevention: Comparing Southern vs Eastern Africa
+                            </h3>
+                            <p class="mt-3 text-base text-gray-600">
+                                How Zambia's progressive policies compare with Tanzania's restrictive approaches and the impact on girls' futures.
+                            </p>
+                        </a>
+                        <div class="mt-4 flex items-center">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-clock text-gray-400"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm text-gray-500">10 min read</p>
+                            </div>
+                            <div class="ml-auto">
+                                <a href="#" class="text-sm font-medium text-indigo-600 hover:text-indigo-500">Read more →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 4 -->
+                <div class="article-card bg-white rounded-lg shadow-md overflow-hidden transition-all">
+                    <div class="p-6">
+                        <div class="flex items-center">
+                            <span class="inline-block px-3 py-1 text-xs font-semibold text-purple-800 bg-purple-100 rounded-full">Legal Frameworks</span>
+                            <span class="ml-2 text-xs text-gray-500">March 22, 2023</span>
+                        </div>
+                        <a href="#" class="block mt-2">
+                            <h3 class="text-xl font-semibold text-gray-900 hover:text-indigo-600">
+                                The Maputo Protocol: 20 Years of Progress and Persistent Challenges
+                            </h3>
+                            <p class="mt-3 text-base text-gray-600">
+                                Assessing implementation gaps in key provisions for girls' rights across AU member states through a legal practitioner's lens.
+                            </p>
+                        </a>
+                        <div class="mt-4 flex items-center">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-clock text-gray-400"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm text-gray-500">15 min read</p>
+                            </div>
+                            <div class="ml-auto">
+                                <a href="#" class="text-sm font-medium text-indigo-600 hover:text-indigo-500">Read more →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 5 -->
+                <div class="article-card bg-white rounded-lg shadow-md overflow-hidden transition-all">
+                    <div class="p-6">
+                        <div class="flex items-center">
+                            <span class="inline-block px-3 py-1 text-xs font-semibold text-blue-800 bg-blue-100 rounded-full">GBV</span>
+                            <span class="ml-2 text-xs text-gray-500">February 15, 2023</span>
+                        </div>
+                        <a href="#" class="block mt-2">
+                            <h3 class="text-xl font-semibold text-gray-900 hover:text-indigo-600">
+                                Alternative Justice Systems: Are They Failing Girl Survivors?
+                            </h3>
+                            <p class="mt-3 text-base text-gray-600">
+                                Examining informal justice mechanisms in rural communities and their impact on GBV cases involving minors.
+                            </p>
+                        </a>
+                        <div class="mt-4 flex items-center">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-clock text-gray-400"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm text-gray-500">9 min read</p>
+                            </div>
+                            <div class="ml-auto">
+                                <a href="#" class="text-sm font-medium text-indigo-600 hover:text-indigo-500">Read more →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 6 -->
+                <div class="article-card bg-white rounded-lg shadow-md overflow-hidden transition-all">
+                    <div class="p-6">
+                        <div class="flex items-center">
+                            <span class="inline-block px-3 py-1 text-xs font-semibold text-yellow-800 bg-yellow-100 rounded-full">Child Marriage</span>
+                            <span class="ml-2 text-xs text-gray-500">January 30, 2023</span>
+                        </div>
+                        <a href="#" class="block mt-2">
+                            <h3 class="text-xl font-semibold text-gray-900 hover:text-indigo-600">
+                                Loopholes in Child Marriage Laws: Lessons from Malawi's Reforms
+                            </h3>
+                            <p class="mt-3 text-base text-gray-600">
+                                Despite legislative progress, customary practices continue to undermine protections. What civil society can learn from Malawian activists.
+                            </p>
+                        </a>
+                        <div class="mt-4 flex items-center">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-clock text-gray-400"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm text-gray-500">11 min read</p>
+                            </div>
+                            <div class="ml-auto">
+                                <a href="#" class="text-sm font-medium text-indigo-600 hover:text-indigo-500">Read more →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="/articles" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700">
+                    View All Articles
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Regional Focus -->
+    <section class="py-16 bg-indigo-700 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-indigo-300 font-semibold tracking-wide uppercase">Regional Expertise</h2>
+                <p class="mt-2 text-3xl font-bold leading-8 tracking-tight sm:text-4xl">
+                    Perspectives Across Africa
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-indigo-200 lg:mx-auto">
+                    My work spans diverse contexts from the Sahel to Southern Africa
+                </p>
+            </div>
+
+            <div class="mt-16 grid gap-8 md:grid-cols-3">
+                <div class="bg-white bg-opacity-10 p-8 rounded-lg backdrop-blur-sm">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-white bg-opacity-20 text-white">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="mt-6 text-xl font-medium">West Africa</h3>
+                    <p class="mt-2 text-indigo-100">
+                        Analyzing FGM legislation in Senegal, school re-entry policies in Ghana, and post-conflict education in Liberia.
+                    </p>
+                    <p class="mt-4">
+                        <a href="#" class="text-sm font-medium text-white hover:text-indigo-200">
+                            View articles →
+                        </a>
+                    </p>
+                </div>
+
+                <div class="bg-white bg-opacity-10 p-8 rounded-lg backdrop-blur-sm">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-white bg-opacity-20 text-white">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="mt-6 text-xl font-medium">East Africa</h3>
+                    <p class="mt-2 text-indigo-100">
+                        SRHR policy implementation in Ethiopia, child marriage prevention in South Sudan, and refugee education models in Uganda.
+                    </p>
+                    <p class="mt-4">
+                        <a href="#" class="text-sm font-medium text-white hover:text-indigo-200">
+                            View articles →
+                        </a>
+                    </p>
+                </div>
+
+                <div class="bg-white bg-opacity-10 p-8 rounded-lg backdrop-blur-sm">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-white bg-opacity-20 text-white">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="mt-6 text-xl font-medium">Southern Africa</h3>
+                    <p class="mt-2 text-indigo-100">
+                        Teen pregnancy policy in Zambia, menstrual health legislation in Zimbabwe, and gender-responsive budgeting in Namibia.
+                    </p>
+                    <p class="mt-4">
+                        <a href="#" class="text-sm font-medium text-white hover:text-indigo-200">
+                            View articles →
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:flex lg:items-center lg:justify-between">
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                        <span class="block">About My</span>
+                        <span class="block text-indigo-600">Advocacy Work</span>
+                    </h2>
+                    <p class="mt-3 text-lg text-gray-600">
+                        These articles reflect my personal perspectives gained through 15+ years of advancing girls' rights across Africa, not institutional positions.
+                    </p>
+                    <dl class="mt-10 space-y-5">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <dt class="text-lg font-medium text-gray-900">
+                                    Legal Background
+                                </dt>
+                                <dd class="mt-1 text-gray-600">
+                                    Human Rights Law (LLM) with focus on African child protection frameworks
+                                </dd>
+                            </div>
+                        </div>
+
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                    <i class="fas fa-globe-africa"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <dt class="text-lg font-medium text-gray-900">
+                                    Regional Experience
+                                </dt>
+                                <dd class="mt-1 text-gray-600">
+                                    Worked in 22 African countries across all sub-regions
+                                </dd>
+                            </div>
+                        </div>
+
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                    <i class="fas fa-balance-scale"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <dt class="text-lg font-medium text-gray-900">
+                                    Current Focus
+                                </dt>
+                                <dd class="mt-1 text-gray-600">
+                                    Legal empowerment approaches for adolescent girls in humanitarian settings
+                                </dd>
+                            </div>
+                        </div>
+                    </dl>
+                </div>
+                <div class="mt-10 lg:mt-0 lg:ml-10 lg:w-1/2">
+                    <img class="rounded-lg shadow-xl" src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="African woman professional">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="bg-gray-100 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 bg-indigo-600 p-10 text-white">
+                        <h3 class="text-2xl font-bold">Stay Updated</h3>
+                        <p class="mt-3 text-indigo-100">
+                            Subscribe to receive notifications when I publish new articles about advancing girls' rights across Africa.
+                        </p>
+                        <div class="mt-6 flex items-center">
+                            <i class="fas fa-lock text-indigo-300 mr-2"></i>
+                            <span class="text-sm text-indigo-200">Your email will never be shared</span>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 p-10">
+                        <form class="space-y-6">
+                            <div>
+                                <label for="full-name" class="block text-sm font-medium text-gray-700">Full name</label>
+                                <input type="text" id="full-name" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm px-4 py-2" placeholder="Your name">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
+                                <input type="email" id="email" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm px-4 py-2" placeholder="you@example.com" required>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex items-center h-5">
+                                    <input id="newsletter" name="newsletter" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                </div>
+                                <div class="ml-3 text-sm">
+                                    <label for="newsletter" class="font-medium text-gray-700">I agree to receive occasional emails</label>
+                                </div>
+                            </div>
+                            <div>
+                                <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                    Subscribe
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                    Get In Touch
+                </h2>
+                <p class="mt-4 max-w-2xl text-xl text-gray-600 mx-auto">
+                    For speaking engagements, consultancies, or discussions about my articles
+                </p>
+            </div>
+
+            <div class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2">
+                <div class="bg-gray-50 p-8 rounded-lg shadow">
+                    <h3 class="text-lg font-medium text-gray-900">Contact Information</h3>
+                    <dl class="mt-4 space-y-4">
+                        <div>
+                            <dt class="sr-only">Email</dt>
+                            <dd class="flex text-base text-gray-600">
+                                <i class="fas fa-envelope mt-1 mr-3 text-indigo-500"></i>
+                                <span>professional@example.com</span>
+                            </dd>
+                        </div>
+                        <div>
+                            <dt class="sr-only">Twitter</dt>
+                            <dd class="flex text-base text-gray-600">
+                                <i class="fab fa-twitter mt-1 mr-3 text-indigo-500"></i>
+                                <a href="#" class="hover:text-indigo-600">@GirlRightsExpert</a>
+                            </dd>
+                        </div>
+                        <div>
+                            <dt class="sr-only">LinkedIn</dt>
+                            <dd class="flex text-base text-gray-600">
+                                <i class="fab fa-linkedin mt-1 mr-3 text-indigo-500"></i>
+                                <a href="#" class="hover:text-indigo-600">linkedin.com/in/girlrightsadvocate</a>
+                            </dd>
+                        </div>
+                    </dl>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-lg shadow">
+                    <form>
+                        <div class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                                <input type="text" id="name" name="name" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm px-4 py-2">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                                <input type="email" id="email" name="email" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm px-4 py-2">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                                <textarea id="message" name="message" rows="4" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm px-4 py-2"></textarea>
+                            </div>
+                            <div>
+                                <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                    Send Message
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Manifesto Section -->
+    <section id="manifesto" class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">What I Believe</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    My core principles that guide every article and advocacy effort
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-sm border-l-4 border-indigo-600">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Teenage Girls Deserve Agency Over Their Bodies. Period.</h3>
+                    <p class="text-gray-600">
+                        Comprehensive sexuality education and access to reproductive health services are fundamental rights, not privileges to be earned.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm border-l-4 border-indigo-600">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Education in Emergencies is Non-Negotiable</h3>
+                    <p class="text-gray-600">
+                        Conflict and displacement amplify vulnerabilities - safe learning spaces must be prioritized in humanitarian response.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm border-l-4 border-indigo-600">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Policy Without Implementation is Empty Rhetoric</h3>
+                    <p class="text-gray-600">
+                        African governments must move beyond ratifying conventions to funding and enforcing protections for girls.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm border-l-4 border-indigo-600">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Data Must Drive Decisions</h3>
+                    <p class="text-gray-600">
+                        Meaningful change requires disaggregated data that reveals the unique challenges facing girls in different contexts.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="#contact" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700">
+                    Share Your Perspective
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+                <div class="space-y-8 xl:col-span-1">
+                    <h3 class="text-xl font-bold">Girl Rights Advocate</h3>
+                    <p class="text-gray-400 text-sm">
+                        Personal blog sharing perspectives on advancing girls' rights across Africa. These views are my own.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-medium"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Navigation</h3>
+                            <ul class="mt-4 space-y-2">
+                                <li><a href="#" class="text-base text-gray-400 hover:text-white">Home</a></li>
+                                <li><a href="#articles" class="text-base text-gray-400 hover:text-white">Articles</a></li>
+                                <li><a href="#about" class="text-base text-gray-400 hover:text-white">About</a></li>
+                                <li><a href="#contact" class="text-base text-gray-400 hover:text-white">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="mt-12 md:mt-0">
+                            <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Topics</h3>
+                            <ul class="mt-4 space-y-2">
+                                <li><a href="#" class="text-base text-gray-400 hover:text-white">SRHR</a></li>
+                                <li><a href="#" class="text-base text-gray-400 hover:text-white">Education</a></li>
+                                <li><a href="#" class="text-base text-gray-400 hover:text-white">Teen Pregnancy</a></li>
+                                <li><a href="#" class="text-base text-gray-400 hover:text-white">Child Marriage</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Regions</h3>
+                            <ul class="mt-4 space-y-2">
+                                <li><a href="#" class="text-base text-gray-400 hover:text-white">West Africa</a></li>
+                                <li><a href="#" class="text-base text-gray-400 hover:text-white">East Africa</a></li>
+                                <li><a href="#" class="text-base text-gray-400 hover:text-white">Southern Africa</a></li>
+                                <li><a href="#" class="text-base text-gray-400 hover:text-white">Central Africa</a></li>
+                            </ul>
+                        </div>
+                        <div class="mt-12 md:mt-0">
+                            <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Legal</h3>
+                            <ul class="mt-4 space-y-2">
+                                <li><a href="#" class="text-base text-gray-400 hover:text-white">Disclaimer</a></li>
+                                <li><a href="#" class="text-base text-gray-400 hover:text-white">Privacy Policy</a></li>
+                                <li><a href="#" class="text-base text-gray-400 hover:text-white">Cookies</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between">
+                <p class="text-base text-gray-400">
+                    &copy; 2023 Girl Rights Advocate. All rights reserved.
+                </p>
+                <p class="mt-4 text-base text-gray-400 md:mt-0">
+                    Views expressed are personal and don't represent any organization.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle mobile menu
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Form submission handling (placeholder)
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Thank you for your message. This is a demo form and your submission was not actually sent.');
+                form.reset();
+            });
+        });
+
+        // Category pills population
+        const categories = [
+    "SRHR", "Education", "Teen Pregnancy", "Child Marriage",
+    "GBV", "Emergency Areas", "Legal Frameworks", "West Africa"
+];
+const categoryContainer = document.getElementById('categoryPills');
+categoryContainer.innerHTML = categories.map(cat =>
+    `<button type="button" class="category-pill rounded-full py-3 px-6 bg-gray-100 text-gray-800 font-medium text-center transition-all" aria-label="${cat}">${cat}</button>`
+).join('');
+    </script>
+</body>
+</html>
