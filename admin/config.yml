@@ -1,21 +1,30 @@
 backend:
   name: git-gateway
-  branch: main # Or master, depending on your repository's default branch
+  branch: main
 
-media_folder: "assets/uploads" # Where to store uploaded images
+media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
+site_url: "http://localhost:8080" # Optional, update with your real URL
+
 collections:
-  - name: "posts" # Used in routes, e.g., /admin/collections/posts
-    label: "Articles" # Used in the UI
-    folder: "_posts" # The folder where the files will be stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template
-    fields: # The fields for each document, usually in front matter
+  - name: "posts"
+    label: "Articles"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: "blog/{{slug}}" # Optional, adjust to your routing
+    fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Category", name: "category", widget: "string"}
-      - {label: "Reading Time (e.g., 8 min read)", name: "read_time", widget: "string"}
+      - {label: "Title", name: "title", widget: "string", required: true}
+      - {label: "Slug", name: "slug", widget: "string", required: false, hint: "Optional: Custom URL slug"}
+      - {label: "Publish Date", name: "date", widget: "datetime", required: true}
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options: ["SRHR", "Education", "Teen Pregnancy", "Child Marriage", "GBV", "Emergency Areas", "Legal Frameworks", "West Africa"]
+        required: true
+      - {label: "Reading Time (e.g., 8 min read)", name: "read_time", widget: "string", required: false}
+      - {label: "Summary", name: "summary", widget: "text", required: false, hint: "Short summary for previews"}
       - {label: "Featured Image", name: "image", widget: "image", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Body", name: "body", widget: "markdown", required: true}
