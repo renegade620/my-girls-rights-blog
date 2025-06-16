@@ -1,10 +1,8 @@
 backend:
-  name: auth0
+  name: github
   repo: renegade620/my-girls-rights-blog
   branch: main
-  auth0:
-    domain: dev-snve1s0vvuty0tjn.us.auth0.com
-    client_id: BCj0rvJot1EPV65nUFY1KBXVYQyUW0zp
+  client_id: Ov23liAD1i11BZi8997G
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
