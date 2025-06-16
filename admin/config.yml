@@ -2,11 +2,13 @@ backend:
   name: github
   repo: renegade620/my-girls-rights-blog
   branch: main
+  auth_type: implicit
+  app_id: Ov23liAD1i11BZi8997G
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
-site_url: "https://my-girls-rights.netlify.app" # Optional, update with your real URL
+site_url: "https://my-girls-rights.netlify.app"
 
 collections:
   - name: "posts"
