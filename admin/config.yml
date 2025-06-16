@@ -1,5 +1,6 @@
 backend:
   name: github
+  repo: renegade620/my-girls-rights-blog
   branch: main
 
 media_folder: "assets/uploads"
